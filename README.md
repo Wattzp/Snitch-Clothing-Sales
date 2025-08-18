@@ -73,6 +73,16 @@ df["Units_Sold"].fillna(df["Units_Sold"].median(), inplace=True)
 
 Visualizations can be created with libraries like Matplotlib, Seaborn, or Plotly.
 
+
+<img width="984" height="484" alt="MonthlySalesTrends" src="https://github.com/user-attachments/assets/a1b6b583-c53d-4cb7-b87b-224b53da41a4" />
+
+
+<img width="784" height="584" alt="TSalesbyProduct" src="https://github.com/user-attachments/assets/a0e3c4ed-b82c-4a9f-bcb1-3f9f268e63ed" />
+
+
+<img width="661" height="684" alt="SalesDisbySeg" src="https://github.com/user-attachments/assets/edaec32b-ce50-4d7b-9d0e-77687ec9202a" />
+
+
 ---
 
 ## Dashboard & Reporting
