@@ -10,7 +10,7 @@ This repository contains a synthetic dataset of sales transactions from Snitch, 
 - [Exploratory Data Analysis](#exploratory-data-analysis)  
 - [Dashboard & Reporting](#dashboard--reporting)  
 - [Tech Stack](#tech-stack)  
-- [Project Structure](#project-structure)  
+- [Key Findings from Snitch Fashion Sales Visualizations](#Key-Findings-from-Snitch-Fashion-Sales-Visualizations)  
 - [Getting Started](#getting-started)  
 - [Usage Examples](#usage-examples)  
 - [Contributing](#contributing)  
@@ -109,54 +109,75 @@ Use Power BI or Excel to build:
 
 ---
 
-## Project Structure
+# Key Findings from Snitch Fashion Sales Visualizations
 
-```
-snitch-sales-project/
-├── data/
-│   ├── snitch_sales_raw.csv
-│   └── snitch_sales_cleaned.csv
-├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_eda.ipynb
-│   └── 03_dashboard_prototype.ipynb
-├── reports/
-│   └── dashboard.pbix
-├── requirements.txt
-└── README.md
-```
+Below are the main insights drawn from each of the seven charts.
 
 ---
 
-## Getting Started
+## 1. Distribution of Discount Percentages
 
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/yourusername/snitch-sales-project.git
-   cd snitch-sales-project
-   ```  
-2. Install dependencies:  
-   ```bash
-   pip install -r requirements.txt
-   ```  
+- The vast majority of orders receive relatively small discounts: over 60% of orders have discounts under 5%.  
+- There is a long right tail, with ~5% of orders enjoying discounts above 20%.  
+- This skew suggests most customers pay near full price, while a minority benefit from heavy promotions.
 
 ---
 
-## Usage Examples
+## 2. Unit Price vs. Profit Scatter
 
-- Run the cleaning notebook to generate `snitch_sales_cleaned.csv`.  
-- Execute the EDA notebook to produce visual insights.  
-- Open `reports/dashboard.pbix` in Power BI for an interactive dashboard.
+- Higher‐priced items (Unit Price > $3,000) generally yield higher absolute profits, clustering in the $1,000–$2,500 range.  
+- A few high‐price outliers still show low or negative profit, indicating steep discounting or potential data issues (returns, cost mismatches).  
+- Mid‐price segments (Unit Price $500–$2,000) display the greatest variability in profit, suggesting these items merit closer margin monitoring.
 
 ---
 
-## Contributing
+## 3. Profit by Product Category
 
-Contributions are welcome! Feel free to open issues or submit pull requests for:
+- Jackets and Shoes lead in median profit, with typical profits around $1,200–$1,500 per order.  
+- Jeans and T-Shirts sit in the middle tier, median profits roughly $400–$800.  
+- Accessories and Dresses have the lowest median profits (sub-$300), and Dresses show the widest range—even some negative margins.
 
-- New cleaning rules  
-- Additional visualizations  
-- Dashboard enhancements  
+---
+
+## 4. Top 10 Cities by Total Sales
+
+- Mumbai emerges as the top market, capturing over 15% of all sales revenue.  
+- Delhi and Bengaluru (counting both “bengaluru” and “Bangalore” entries) occupy the next two spots, each with 10–12%.  
+- Ahmedabad, Pune, and Hyderabad also rank in the leading ten, indicating strong regional hubs beyond the metros.
+
+---
+
+## 5. Monthly Sales Trend by Customer Segment
+
+- B2C sales climb steadily month over month, peaking around year-end holiday promotions.  
+- B2B sales are more lumpy, with pronounced spikes at quarter-end months—likely driven by corporate procurement cycles.  
+- Overall, B2C contributes around 60% of monthly revenue, while B2B’s share fluctuates between 30–40%.
+
+---
+
+## 6. Correlation Matrix of Key Metrics
+
+- Sales_Amount correlates very strongly with Units_Sold (≈ 0.90) and Profit (≈ 0.92), as expected.  
+- Unit_Price also shows a moderate positive correlation with Profit (≈ 0.60), reinforcing that upselling higher-priced items boosts margins.  
+- Discount_% has a modest negative correlation with Profit (≈ –0.40), highlighting that deeper discounts erode profitability.
+
+---
+
+## 7. Discount % by Customer Segment
+
+- B2B orders enjoy higher median discounts (~8%) than B2C orders (~4%).  
+- B2B discounts also exhibit a wider spread: some corporate accounts receive over 20% off.  
+- B2C discounts are more tightly clustered, rarely exceeding 15%.
+
+---
+
+# Strategic Implications
+
+- **Optimize Discounting**: Most discounts are shallow; consider targeted promotions for underperforming segments (e.g., Dresses, Accessories).  
+- **Product Focus**: Continue prioritizing Jackets and Shoes, which drive the highest profit per order.  
+- **Regional Tailoring**: Deepen presence in Mumbai, Delhi, and Bengaluru, while exploring growth opportunities in second-tier cities.  
+- **Segmented Campaigns**: Align B2B promotions with corporate buying cycles; use end-of-quarter offers to smooth revenue spikes.  
+- **Data Quality Checks**: Investigate orders with high Unit Price but negative profit to correct potential errors in cost or returns data.
 
 ---
 
@@ -165,9 +186,4 @@ Contributions are welcome! Feel free to open issues or submit pull requests for:
 This project is licensed under the MIT License.  
 
 ---
-
-Looking ahead, you might explore:
-
-- Building a predictive model (e.g., forecasting next quarter’s sales).  
-- Deploying the dashboard to Power BI Service for live sharing.  
-- Packaging the cleaning pipeline as a reusable Python module.  
+  
