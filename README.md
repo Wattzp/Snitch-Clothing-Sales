@@ -92,7 +92,11 @@ Use Power BI or Excel to build:
 - Sales overview with slicers for date range  
 - Drill-down by product category and city  
 - Monthly vs. target performance gauges  
-- Customer segmentation charts  
+- Customer segmentation charts
+
+
+![SnitchClothings](https://github.com/user-attachments/assets/2807f482-1659-4e9d-9d5a-ce471872c9f1)
+
 
 ---
 
