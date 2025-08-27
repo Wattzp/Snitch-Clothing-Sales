@@ -10,10 +10,7 @@ This repository contains a synthetic dataset of sales transactions from Snitch, 
 - [Exploratory Data Analysis](#exploratory-data-analysis)  
 - [Dashboard & Reporting](#dashboard--reporting)  
 - [Tech Stack](#tech-stack)  
-- [Key Findings from Snitch Fashion Sales Visualizations](#Key-Findings-from-Snitch-Fashion-Sales-Visualizations)  
-- [Getting Started](#getting-started)  
-- [Usage Examples](#usage-examples)  
-- [Contributing](#contributing)  
+- [Key Findings from Snitch Fashion Sales Visualizations](#Key-Findings-from-Snitch-Fashion-Sales-Visualizations)    
 - [License](#license)  
 
 ---
